@@ -24,6 +24,13 @@ const projects = [
     desc: 'Online learning platform for online and hybrid learning. Monitoring of courses, sales department, management of students and employees.',
   },
   {
+    title: 'Karsoft IT Solutions',
+    mockup: '/mockups/karsoftMock.png',
+    live: '',
+    code: '',
+    desc: 'A CRM system developed for Karsoft IT Solution fully automates business processes, including CRM and ERP management, and integrates website and Telegram bot functionalities.',
+  },
+  {
     title: 'React Pizza',
     mockup: '/mockups/reactpizzaMock.png',
     live: 'https://react-pizza-a.vercel.app/',
@@ -36,6 +43,13 @@ const projects = [
     live: 'https://todo-tasks-app.vercel.app/',
     code: 'https://github.com/atabekdeveloper/todo-tasks-app',
     desc: 'Web application for task management. Allows you to create, edit and delete tasks, as well as mark them as completed. Has a simple and convenient interface for effective organization of affairs.',
+  },
+  {
+    title: 'Alarm Clock',
+    mockup: '/mockups/clockMock.png',
+    live: 'https://analog-alarm-clock.vercel.app/',
+    code: 'https://github.com/atabekdeveloper/analog-clock',
+    desc: '',
   },
 ];
 
