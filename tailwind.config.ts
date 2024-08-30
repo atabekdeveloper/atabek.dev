@@ -19,9 +19,14 @@ const config: Config = {
           '60%': { transform: 'rotate(0.0deg)' },
           '100%': { transform: 'rotate(0.0deg)' },
         },
+        spinner: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
       },
       animation: {
         wave: 'wave 2s ease-in-out infinite',
+        spinner: 'spinner 10s linear infinite',
       },
     },
   },

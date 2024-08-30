@@ -3,7 +3,7 @@ import DarkModeToggle from '../DarkModeToggle';
 import MobileNavDropdown from './MobileNavDropdown';
 
 const Logo = ({ className }: { className?: string }) => {
-  return <img alt="logo" src="/letter-a.png" className={`w-20 ${className}`} />;
+  return <img alt="logo" src="/atom.png" className={`w-20 ${className} animate-spinner`} />;
 };
 
 export const navLinks = [
