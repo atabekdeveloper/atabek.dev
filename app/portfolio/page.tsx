@@ -1,57 +1,6 @@
+import { projects } from '@/data';
 import Link from 'next/link';
 import React from 'react';
-
-const projects = [
-  {
-    title: 'Rivoj Yulduz',
-    mockup: '/mockups/rivojyulduzMock.png',
-    live: 'https://rivojyulduz.uz/',
-    code: '',
-    desc: '"RIVOJ YULDUZ" is a top advertising and production company with 15 years of experience, offering a full range of advertising services. It has 2 workshops and a team of professionals who create bright advertising on any media - from billboards to social networks.',
-  },
-  {
-    title: 'World SAMO',
-    mockup: '/mockups/samoMock.png',
-    live: 'https://sales-up-one.vercel.app/',
-    code: 'https://github.com/atabekdeveloper/sales-up',
-    desc: 'The CRM system for WorldSamo.com features a sleek and user-friendly UI/UX design tailored to enhance efficiency in managing customer relationships.',
-  },
-  {
-    title: 'NewAction',
-    mockup: '/mockups/newactionMock.png',
-    live: 'https://newaction.uz/',
-    code: '',
-    desc: 'Online learning platform for online and hybrid learning. Monitoring of courses, sales department, management of students and employees.',
-  },
-  {
-    title: 'Karsoft IT Solutions',
-    mockup: '/mockups/karsoftMock.png',
-    live: '',
-    code: '',
-    desc: 'A CRM system developed for Karsoft IT Solution fully automates business processes, including CRM and ERP management, and integrates website and Telegram bot functionalities.',
-  },
-  {
-    title: 'React Pizza',
-    mockup: '/mockups/reactpizzaMock.png',
-    live: 'https://react-pizza-a.vercel.app/',
-    code: 'https://github.com/atabekdeveloper/react-pizza',
-    desc: 'A web app for ordering pizza. Allows you to select a pizza, configure parameters, add to cart and place an order. Includes filtering, sorting and modern design.',
-  },
-  {
-    title: 'To-Do List',
-    mockup: '/mockups/todoAppMock.png',
-    live: 'https://todo-tasks-app.vercel.app/',
-    code: 'https://github.com/atabekdeveloper/todo-tasks-app',
-    desc: 'Web application for task management. Allows you to create, edit and delete tasks, as well as mark them as completed. Has a simple and convenient interface for effective organization of affairs.',
-  },
-  {
-    title: 'Alarm Clock',
-    mockup: '/mockups/clockMock.png',
-    live: 'https://analog-alarm-clock.vercel.app/',
-    code: 'https://github.com/atabekdeveloper/analog-clock',
-    desc: '',
-  },
-];
 
 const Portfolio = () => {
   return (
@@ -62,6 +11,22 @@ const Portfolio = () => {
             <img src={project.mockup} className="mb-4 p-2" />
             <h1 className="text-3xl mb-2">{project.title}</h1>
             <p className="mb-4 md:max-w-[300px] overflow-hidden line-clamp-3">{project.desc}</p>
+            <div className="flex items-center mb-4">
+              {project.iconLists?.map(({ icon, name }, index) => (
+                <div
+                  key={index}
+                  className="relative group border border-white/[.2] rounded-full bg-gray-200 lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                  style={{
+                    transform: `translateX(-${5 * index + 2}px)`,
+                  }}
+                >
+                  <img src={icon} alt={`icon${index}`} className="p-2" />
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-black text-white text-xs rounded py-1 px-2 whitespace-nowrap overflow-hidden text-ellipsis transition duration-300">
+                    {name}
+                  </div>
+                </div>
+              ))}
+            </div>
             <div className="flex gap-2">
               {project.live && (
                 <Link href={project.live} target="_blank" className="btn btn-secondary">
