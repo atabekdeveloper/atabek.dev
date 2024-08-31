@@ -64,6 +64,32 @@ export const projects = [
     desc: 'A CRM system developed for Karsoft IT Solution fully automates business processes, including CRM and ERP management, and integrates website and Telegram bot functionalities.',
   },
   {
+    title: 'My Portfolio',
+    mockup: '/mockups/portfolioMock.png',
+    live: 'https://atabek.vercel.app/',
+    code: 'https://github.com/atabekdeveloper/atabek.dev',
+    iconLists: [
+      { name: 'Next.js', icon: '/icons/nextjs.svg' },
+      { name: 'TypeScript', icon: '/icons/ts.svg' },
+      { name: 'Tailwind', icon: '/icons/tail.svg' },
+    ],
+    desc: 'I have created a portfolio using Next.js that you can use in your own project. This site showcases my web development skills, and its simple structure and modern design make it a great base for your portfolio.',
+  },
+  {
+    title: 'Next Portfolio',
+    mockup: '/mockups/nextportfolioMock.png',
+    live: 'https://next-portfolio-best.vercel.app/',
+    code: 'https://github.com/atabekdeveloper/next-portfolio',
+    iconLists: [
+      { name: 'Next.js', icon: '/icons/nextjs.svg' },
+      { name: 'TypeScript', icon: '/icons/ts.svg' },
+      { name: 'Tailwind', icon: '/icons/tail.svg' },
+      { name: 'Three.js', icon: '/icons/three.svg' },
+      { name: 'Framer Motion', icon: '/icons/fm.svg' },
+    ],
+    desc: 'This is a portfolio built on Next.js that showcases modern approaches to web development. You can use this project as a basis for creating your own portfolio, adapting it to your needs.',
+  },
+  {
     title: 'React Pizza',
     mockup: '/mockups/reactpizzaMock.png',
     live: 'https://react-pizza-a.vercel.app/',
