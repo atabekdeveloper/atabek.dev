@@ -2,6 +2,13 @@ import { projects } from '@/data';
 import Link from 'next/link';
 import React from 'react';
 
+function replaceDesc(text: string, searchText?: string, link?: string) {
+  return text.replace(
+    `${searchText}`,
+    `<a href="${link}" style="color: #7480FF" target="_blank">${searchText}</a>`,
+  );
+}
+
 const Portfolio = () => {
   return (
     <div className="text-center">
@@ -10,7 +17,12 @@ const Portfolio = () => {
           <div key={index} className="md:w-1/2 flex flex-col items-center justify-center mb-4">
             <img src={project.mockup} className="mb-4 p-2" />
             <h1 className="text-3xl mb-2">{project.title}</h1>
-            <p className="mb-4 md:max-w-[300px] overflow-hidden line-clamp-3">{project.desc}</p>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: replaceDesc(project.desc, project.replaceText, project.link),
+              }}
+              className="mb-4 md:max-w-[300px] overflow-hidden line-clamp-3"
+            />
             <div className="flex items-center mb-4">
               {project.iconLists?.map(({ icon, name }, index) => (
                 <div
