@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaTelegram } from 'react-icons/fa6';
 const ProfilePicture = () => {
   return (
     <img
-      src="/self.png"
+      src="/self2.png"
       alt="Profile picture of Atabek"
       className="bg-gradient-to-br from-indigo-500 to-fuchsia-500 rounded-full w-[350px] md:w-2/5"
     />
